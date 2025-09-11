@@ -1,6 +1,8 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Alheli from '../assets/Alheli.png';
+import Rosa from '../assets/rosa.png';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -8,4 +10,176 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Welcome />
+	
+	<!-- Sección de Alhelí con imagen rosa de fondo -->
+	<section class="alheli-section">
+		<!-- Imagen rosa de fondo -->
+		<div class="rosa-background">
+			<img src={Rosa.src} alt="Fondo rosa" class="rosa-background-image" />
+		</div>
+		
+		<!-- Texto superior -->
+		<div class="top-text">
+			LANZAMIENTO OFICIAL DE
+		</div>
+		
+		<!-- Logo y nombre Alhelí -->
+		<div class="alheli-logo-section">
+			<img src={Alheli.src} alt="Alhelí" class="alheli-logo" />
+		</div>
+		
+		<!-- Texto descriptivo -->
+		<div class="description-text">
+			LA PRIMERA HERRAMIENTA QUE<br>
+			TRANSFORMARÁ TUS DECISIONES<br>
+			JURÍDICAS Y ADMINISTRATIVAS
+		</div>
+		
+		<!-- Barra rosa inferior -->
+		<div class="pink-bar"></div>
+	</section>
 </Layout>
+
+<style>
+	.alheli-section {
+		height: 100vh;
+		width: 100vw;
+		background: #000;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		font-family: sans-serif;
+		color: white;
+	}
+
+	.rosa-background {
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40%;
+		height: 30%;
+		z-index: 1;
+	}
+
+	.rosa-background-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+		opacity: 0.3;
+	}
+
+	.top-text {
+		font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		text-align: center;
+		margin-bottom: 2.5rem;
+		opacity: 0.9;
+		position: relative;
+		z-index: 2;
+	}
+
+	.alheli-logo-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 2.5rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.alheli-logo {
+		max-width: 100%;
+		height: auto;
+		max-height: 160px;
+		object-fit: contain;
+	}
+
+	.description-text {
+		font-size: clamp(1rem, 2.5vw, 1.6rem);
+		font-weight: 400;
+		text-align: center;
+		line-height: 1.3;
+		margin-bottom: 3rem;
+		letter-spacing: 0.05em;
+		position: relative;
+		z-index: 2;
+	}
+
+	.pink-bar {
+		width: 300px;
+		height: 12px;
+		background: #FF69B4;
+		border-radius: 6px;
+		position: relative;
+		z-index: 2;
+	}
+
+	/* Responsive para todas las secciones */
+	@media (max-width: 768px) {
+		.rosa-background {
+			top: 8%;
+			width: 35%;
+			height: 25%;
+		}
+		
+		.rosa-background-image {
+			opacity: 0.25;
+		}
+		
+		.top-text {
+			font-size: clamp(1rem, 2vw, 1.2rem);
+			margin-bottom: 2rem;
+		}
+		
+		.alheli-logo {
+			max-height: 130px;
+		}
+		
+		.description-text {
+			font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+			margin-bottom: 2.5rem;
+		}
+		
+		.pink-bar {
+			width: 250px;
+			height: 10px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.rosa-background {
+			top: 5%;
+			width: 30%;
+			height: 20%;
+		}
+		
+		.rosa-background-image {
+			opacity: 0.2;
+		}
+		
+		.top-text {
+			font-size: clamp(0.9rem, 1.8vw, 1rem);
+			margin-bottom: 1.5rem;
+		}
+		
+		.alheli-logo {
+			max-height: 100px;
+		}
+		
+		.description-text {
+			font-size: clamp(0.8rem, 1.8vw, 1rem);
+			margin-bottom: 2rem;
+		}
+		
+		.pink-bar {
+			width: 200px;
+			height: 8px;
+		}
+	}
+</style>
