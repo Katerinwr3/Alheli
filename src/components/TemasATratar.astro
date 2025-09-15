@@ -1,0 +1,392 @@
+---
+// Componente de Temas a Tratar
+---
+
+<section class="temas-section">
+	<!-- Background con imagen circulos2 -->
+	<div class="background-image">
+		<img src="/src/assets/circulos2.PNG" alt="Fondo circulos" class="circulos-bg" />
+	</div>
+	
+	<div class="temas-container">
+		<!-- Título principal -->
+		<div class="main-title">
+			<span class="title-pink">TEMAS</span>
+			<span class="title-orange">A TRATAR</span>
+		</div>
+		
+		<!-- Contenedor de las cards -->
+		<div class="cards-container">
+			<!-- Card 1 -->
+			<div class="topic-card">
+				<div class="card-icon">
+					<img src="/src/assets/ic1.png" alt="Búsqueda y análisis" class="icon-image" />
+				</div>
+				<div class="card-text">
+					Búsqueda y análisis de jurisprudencia y normativa con IA.
+				</div>
+			</div>
+			
+			<!-- Card 2 -->
+			<div class="topic-card">
+				<div class="card-icon">
+					<img src="/src/assets/ic2.png" alt="Complex" class="icon-image" />
+				</div>
+				<div class="card-text">
+					Complex: subir, resumir y redactar con base legal.
+				</div>
+			</div>
+			
+			<!-- Card 3 -->
+			<div class="topic-card">
+				<div class="card-icon">
+					<img src="/src/assets/ic3.png" alt="Nuevo rumbo" class="icon-image" />
+				</div>
+				<div class="card-text">
+					El nuevo rumbo para el futuro del Ecuador.
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.temas-section {
+		width: 100%;
+		max-width: 100vw;
+		background: #000000;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem 2rem;
+		font-family: sans-serif;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		position: relative;
+		min-height: 100vh;
+	}
+
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	.circulos-bg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+		opacity: 0.3;
+	}
+
+	.temas-container {
+		max-width: 1200px;
+		width: 100%;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.main-title {
+		font-family: 'Montserrat', sans-serif;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: 4rem;
+		line-height: 1.1;
+	}
+
+	.title-pink {
+		background: linear-gradient(135deg, #E62686 0%, #FF6B35 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-right: 1rem;
+	}
+
+	.title-orange {
+		background: linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.cards-container {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		flex-wrap: nowrap;
+	}
+
+	.topic-card {
+		background: rgba(20, 20, 20, 0.9);
+		border-radius: 20px;
+		padding: 2.5rem 2rem;
+		backdrop-filter: blur(15px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 
+			0 15px 35px rgba(0, 0, 0, 0.4),
+			0 0 20px rgba(230, 38, 134, 0.1),
+			inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		width: 100%;
+		max-width: 350px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		transition: all 0.4s ease;
+		overflow: hidden;
+	}
+
+	.topic-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(230, 38, 134, 0.5), transparent);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.topic-card::after {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(230, 38, 134, 0.1) 0%, transparent 70%);
+		opacity: 0;
+		transition: opacity 0.4s ease;
+		pointer-events: none;
+		animation: pulse-glow 3s ease-in-out infinite;
+	}
+
+	@keyframes pulse-glow {
+		0%, 100% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0.05;
+		}
+	}
+
+	.topic-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 
+			0 25px 50px rgba(0, 0, 0, 0.5),
+			0 0 30px rgba(230, 38, 134, 0.3),
+			0 0 60px rgba(255, 107, 53, 0.2),
+			inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	}
+
+	.topic-card:hover::before {
+		opacity: 1;
+	}
+
+	.topic-card:hover::after {
+		opacity: 1;
+	}
+
+	.card-icon {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+	}
+
+	.icon-image {
+		width: 40px;
+		height: 40px;
+		object-fit: contain;
+		filter: drop-shadow(0 0 8px rgba(230, 38, 134, 0.3));
+		transition: all 0.3s ease;
+	}
+
+	.topic-card:hover .icon-image {
+		filter: drop-shadow(0 0 15px rgba(230, 38, 134, 0.6)) drop-shadow(0 0 25px rgba(255, 107, 53, 0.4));
+		transform: scale(1.1);
+	}
+
+	.card-text {
+		font-family: Arial, sans-serif;
+		font-size: clamp(1rem, 2vw, 1.3rem);
+		font-weight: normal;
+		color: white;
+		text-align: left;
+		line-height: 1.4;
+		letter-spacing: 0.02em;
+		margin-top: 2rem;
+		position: relative;
+		z-index: 2;
+		text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.topic-card:hover .card-text {
+		text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+		color: #f8f8f8;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.temas-section {
+			padding: 3rem 1.5rem;
+		}
+
+		.main-title {
+			font-size: clamp(2rem, 4vw, 3rem);
+			margin-bottom: 3rem;
+		}
+
+		.cards-container {
+			gap: 1.5rem;
+		}
+
+		.topic-card {
+			max-width: 300px;
+			padding: 2rem 1.5rem;
+		}
+
+		.icon-image {
+			width: 35px;
+			height: 35px;
+		}
+
+		.card-text {
+			font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+			margin-top: 1.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.temas-section {
+			padding: 2rem 1rem;
+		}
+
+		.main-title {
+			font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+			margin-bottom: 2.5rem;
+		}
+
+		.cards-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 1.5rem;
+		}
+
+		.topic-card {
+			max-width: 100%;
+			padding: 1.8rem 1.5rem;
+		}
+
+		.icon-image {
+			width: 30px;
+			height: 30px;
+		}
+
+		.card-text {
+			font-size: clamp(0.85rem, 1.6vw, 1rem);
+			text-align: left;
+			margin-top: 1.2rem;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.temas-section {
+			padding: 1.5rem 0.8rem;
+		}
+
+		.main-title {
+			font-size: clamp(1.6rem, 3vw, 2rem);
+			margin-bottom: 2rem;
+		}
+
+		.topic-card {
+			padding: 1.5rem 1.2rem;
+		}
+
+		.icon-image {
+			width: 25px;
+			height: 25px;
+		}
+
+		.card-text {
+			font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+			margin-top: 1rem;
+		}
+	}
+
+	/* Orientación landscape en móviles */
+	@media (max-width: 768px) and (orientation: landscape) {
+		.temas-section {
+			padding: 2rem 1rem;
+		}
+
+		.main-title {
+			font-size: clamp(1.5rem, 2.5vw, 2rem);
+			margin-bottom: 2rem;
+		}
+
+		.cards-container {
+			flex-direction: row;
+			gap: 1rem;
+		}
+
+		.topic-card {
+			max-width: 250px;
+			padding: 1.5rem 1.2rem;
+		}
+
+		.icon-image {
+			width: 30px;
+			height: 30px;
+		}
+
+		.card-text {
+			font-size: clamp(0.8rem, 1.3vw, 1rem);
+			margin-top: 1rem;
+		}
+	}
+
+	/* Pantallas muy grandes */
+	@media (min-width: 1400px) {
+		.temas-section {
+			padding: 6rem 3rem;
+		}
+
+		.main-title {
+			font-size: 4.5rem;
+			margin-bottom: 5rem;
+		}
+
+		.cards-container {
+			gap: 3rem;
+		}
+
+		.topic-card {
+			max-width: 400px;
+			padding: 3rem 2.5rem;
+		}
+
+		.icon-image {
+			width: 50px;
+			height: 50px;
+		}
+
+		.card-text {
+			font-size: 1.4rem;
+			margin-top: 2.5rem;
+		}
+	}
+</style>
