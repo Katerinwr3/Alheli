@@ -18,12 +18,8 @@ import FondoMapa from '../assets/fondomapa.png';
 <Layout>
 	<Welcome />
 	
-	<!-- Sección de Alhelí con imagen fondomapa de fondo -->
+	<!-- Sección de Alhelí con fondo negro -->
 	<section class="alheli-section">
-		<!-- Imagen fondomapa de fondo -->
-		<div class="fondomapa-background">
-			<img src={FondoMapa.src} alt="Fondo mapa" class="fondomapa-background-image" />
-		</div>
 		
 		<!-- Texto superior -->
 		<div class="top-text">
@@ -130,7 +126,7 @@ import FondoMapa from '../assets/fondomapa.png';
 	}
 	
 	.alheli-section {
-		min-height: 100vh;
+		min-height: auto;
 		width: 100%;
 		max-width: 100vw;
 		background: #000;
@@ -142,47 +138,28 @@ import FondoMapa from '../assets/fondomapa.png';
 		overflow: hidden;
 		font-family: sans-serif;
 		color: white;
-		padding: 1rem 1rem 2rem 1rem;
+		padding: 1cm 1rem 1.5cm 1rem;
 		box-sizing: border-box;
 	}
 
-	.fondomapa-background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		overflow: hidden;
-	}
-
-	.fondomapa-background-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		opacity: 0.1;
-	}
 
 	.top-text {
 		font-size: clamp(1.1rem, 2.5vw, 1.5rem);
 		font-weight: 400;
 		letter-spacing: 0.1em;
 		text-align: center;
-		margin-bottom: 2.5rem;
+		margin-bottom: 1rem;
 		opacity: 0.9;
 		position: relative;
-		z-index: 2;
 	}
 
-	.alheli-logo-section {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 2.5rem;
-		position: relative;
-		z-index: 2;
-	}
+		.alheli-logo-section {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0.8rem;
+			position: relative;
+		}
 
 	.alheli-logo {
 		max-width: 100%;
@@ -196,19 +173,17 @@ import FondoMapa from '../assets/fondomapa.png';
 		font-weight: 400;
 		text-align: center;
 		line-height: 1.3;
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 		letter-spacing: 0.05em;
 		position: relative;
-		z-index: 2;
 	}
 
 	.pink-bar {
-		width: 300px;
+		width: 150px;
 		height: 12px;
 		background: #E62686;
 		border-radius: 6px;
 		position: relative;
-		z-index: 2;
 	}
 
 	/* Responsive para todas las secciones */
@@ -255,14 +230,14 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 768px) {
 		.alheli-section {
-			padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+			padding: 0.5cm 0.5rem 0.75cm 0.5rem;
 			max-width: 100vw;
 			overflow-x: hidden;
 		}
 		
 		.top-text {
 			font-size: clamp(1rem, 2vw, 1.2rem);
-			margin-bottom: 2rem;
+			margin-bottom: 0.6rem;
 		}
 		
 		.alheli-logo {
@@ -271,7 +246,7 @@ import FondoMapa from '../assets/fondomapa.png';
 		
 		.description-text {
 			font-size: clamp(0.9rem, 2.2vw, 1.1rem);
-			margin-bottom: 2.5rem;
+			margin-bottom: 0.6rem;
 		}
 		
 		.pink-bar {
@@ -282,12 +257,12 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 576px) {
 		.alheli-section {
-			padding: 0.3rem 0.5rem 1rem 0.5rem;
+			padding: 0.3cm 0.5rem 0.45cm 0.5rem;
 		}
 		
 		.top-text {
 			font-size: clamp(0.9rem, 1.8vw, 1rem);
-			margin-bottom: 1.8rem;
+			margin-bottom: 0.4rem;
 		}
 		
 		.alheli-logo {
@@ -296,7 +271,7 @@ import FondoMapa from '../assets/fondomapa.png';
 		
 		.description-text {
 			font-size: clamp(0.8rem, 1.8vw, 0.95rem);
-			margin-bottom: 2.2rem;
+			margin-bottom: 0.4rem;
 		}
 		
 		.pink-bar {
@@ -306,10 +281,13 @@ import FondoMapa from '../assets/fondomapa.png';
 	}
 
 	@media (max-width: 480px) {
+		.alheli-section {
+			padding: 0.2cm 0.5rem 0.3cm 0.5rem;
+		}
 		
 		.top-text {
 			font-size: clamp(0.85rem, 1.6vw, 0.95rem);
-			margin-bottom: 1.5rem;
+			margin-bottom: 0.3rem;
 		}
 		
 		.alheli-logo {
@@ -318,7 +296,7 @@ import FondoMapa from '../assets/fondomapa.png';
 		
 		.description-text {
 			font-size: clamp(0.75rem, 1.6vw, 0.9rem);
-			margin-bottom: 2rem;
+			margin-bottom: 0.3rem;
 		}
 		
 		.pink-bar {
@@ -329,14 +307,14 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 360px) {
 		.alheli-section {
-			padding: 0.2rem 0.3rem 0.8rem 0.3rem;
+			padding: 0.15cm 0.3rem 0.225cm 0.3rem;
 			max-width: 100vw;
 			overflow-x: hidden;
 		}
 		
 		.top-text {
 			font-size: clamp(0.8rem, 1.4vw, 0.9rem);
-			margin-bottom: 1.2rem;
+			margin-bottom: 0.2rem;
 		}
 		
 		.alheli-logo {
@@ -345,7 +323,7 @@ import FondoMapa from '../assets/fondomapa.png';
 		
 		.description-text {
 			font-size: clamp(0.7rem, 1.4vw, 0.85rem);
-			margin-bottom: 1.8rem;
+			margin-bottom: 0.2rem;
 		}
 		
 		.pink-bar {
@@ -383,7 +361,7 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	.info-column {
 		flex: 1;
-		text-align: left;
+		text-align: center;
 	}
 
 	.column-title {
@@ -480,7 +458,7 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 768px) {
 		.event-info-section {
-			padding: 2.5rem 1rem;
+			padding: 0.8rem 1rem;
 			max-width: 100vw;
 			overflow-x: hidden;
 		}
@@ -513,7 +491,7 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 576px) {
 		.event-info-section {
-			padding: 2rem 0.8rem;
+			padding: 0.6rem 0.8rem;
 		}
 
 		.event-info-panel {
@@ -541,7 +519,7 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 480px) {
 		.event-info-section {
-			padding: 1.5rem 0.5rem;
+			padding: 0.4rem 0.5rem;
 		}
 
 		.event-info-panel {
@@ -569,7 +547,7 @@ import FondoMapa from '../assets/fondomapa.png';
 
 	@media (max-width: 360px) {
 		.event-info-section {
-			padding: 1.2rem 0.3rem;
+			padding: 0.3rem 0.3rem;
 		}
 
 		.event-info-panel {
