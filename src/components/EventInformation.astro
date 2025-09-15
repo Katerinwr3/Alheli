@@ -1,5 +1,11 @@
 ---
 // Componente de información del evento
+import Reloj from '../assets/reloj.png';
+import Vestimenta from '../assets/vestimenta.png';
+import Consejo from '../assets/consejo.png';
+import BotonMapa from '../assets/botonmapa.png';
+import BotonAgenda from '../assets/botonagenda.png';
+import BotonWts from '../assets/botonwts.png';
 ---
 
 <section class="event-info-section">
@@ -14,7 +20,7 @@
 			<!-- Sección Duración -->
 			<div class="info-section">
 				<div class="section-icon">
-					<img src="/src/assets/reloj.png" alt="Reloj" class="icon-image" />
+					<img src={Reloj.src} alt="Reloj" class="icon-image" />
 				</div>
 				<div class="section-heading">DURACIÓN</div>
 				<div class="section-detail">45-60 minutos</div>
@@ -26,7 +32,7 @@
 			<!-- Sección Vestimenta -->
 			<div class="info-section">
 				<div class="section-icon">
-					<img src="/src/assets/vestimenta.png" alt="Vestimenta" class="icon-image" />
+					<img src={Vestimenta.src} alt="Vestimenta" class="icon-image" />
 				</div>
 				<div class="section-heading">VESTIMENTA</div>
 				<div class="section-detail">Casual</div>
@@ -38,7 +44,7 @@
 			<!-- Sección Recomendación -->
 			<div class="info-section">
 				<div class="section-icon">
-					<img src="/src/assets/consejo.png" alt="Consejo" class="icon-image" />
+					<img src={Consejo.src} alt="Consejo" class="icon-image" />
 				</div>
 				<div class="section-heading">RECOMENDACIÓN</div>
 				<div class="section-detail">Llegar 10 min antes</div>
@@ -48,15 +54,15 @@
 		<!-- Botones de acción -->
 		<div class="action-buttons">
 			<a href="https://maps.app.goo.gl/DkUJwPcbxXBHjCSHA" target="_blank" class="action-button">
-				<img src="/src/assets/botonmapa.png" alt="Abrir en Maps" class="button-image" />
+				<img src={BotonMapa.src} alt="Abrir en Maps" class="button-image" />
 			</a>
 			
 			<a href="#temas-a-tratar" class="action-button">
-				<img src="/src/assets/botonagenda.png" alt="Ver Agenda" class="button-image" />
+				<img src={BotonAgenda.src} alt="Ver Agenda" class="button-image" />
 			</a>
 			
 			<a href="https://wa.link/vv93vo" target="_blank" class="action-button">
-				<img src="/src/assets/botonwts.png" alt="WhatsApp" class="button-image" />
+				<img src={BotonWts.src} alt="WhatsApp" class="button-image" />
 			</a>
 		</div>
 	</div>
