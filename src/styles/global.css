@@ -1,0 +1,46 @@
+/* Estilos globales sin Tailwind para evitar conflictos */
+
+/* Estilos globales para asegurar consistencia en deploy */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Asegurar que todos los elementos respeten el ancho de pantalla */
+section, div, img {
+  max-width: 100%;
+}
+
+/* Prevenir desbordamiento horizontal */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos para el color rosa personalizado */
+.pink-custom {
+  color: #E62686;
+}
+
+.bg-pink-custom {
+  background-color: #E62686;
+}
+
+/* Estilos para fuentes */
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-arial {
+  font-family: Arial, sans-serif;
+}
