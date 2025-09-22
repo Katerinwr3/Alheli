@@ -1,8 +1,7 @@
 ---
 // Componente de auspiciantes
-import LogoPuntoNet from '../assets/logo-puntonet-corp-sin-1.png';
-import LogoUniandes from '../assets/logo blancp uniandes.png';
 import LogoFonles from '../assets/logo-fonles-studio.png';
+import LogoCelerity from '../assets/celerityAUSPICIANTE.png';
 ---
 
 <section class="sponsors-section">
@@ -14,19 +13,14 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 		
 		<!-- Logos de auspiciantes -->
 		<div class="sponsors-logos">
-			<!-- Logo PuntoNet -->
-			<div class="sponsor-logo">
-				<img src={LogoPuntoNet.src} alt="PuntoNet Corp" class="logo-image" />
-			</div>
-			
-			<!-- Logo Universidad Uniandes -->
-			<div class="sponsor-logo">
-				<img src={LogoUniandes.src} alt="Universidad Uniandes" class="logo-image logo-center" />
-			</div>
-			
 			<!-- Logo Fonles Studio -->
 			<div class="sponsor-logo">
 				<img src={LogoFonles.src} alt="Fonles Studio" class="logo-image" />
+			</div>
+			
+			<!-- Logo Celerity -->
+			<div class="sponsor-logo">
+				<img src={LogoCelerity.src} alt="Celerity" class="logo-image logo-celerity" />
 			</div>
 		</div>
 		
@@ -97,6 +91,11 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 
 	.logo-center {
 		max-height: 200px;
+	}
+
+	.logo-celerity {
+		max-height: 300px !important;
+		width: auto;
 	}
 
 	.info-text {
@@ -173,6 +172,10 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 		.logo-center {
 			max-height: 170px;
 		}
+
+		.logo-celerity {
+			max-height: 250px !important;
+		}
 	}
 
 	@media (max-width: 360px) {
@@ -201,6 +204,10 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 		.logo-center {
 			max-height: 140px;
 		}
+
+		.logo-celerity {
+			max-height: 200px !important;
+		}
 	}
 
 	/* Orientación landscape en móviles */
@@ -225,6 +232,10 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 
 		.logo-center {
 			max-height: 130px;
+		}
+
+		.logo-celerity {
+			max-height: 180px !important;
 		}
 
 		.main-title {
@@ -259,6 +270,10 @@ import LogoFonles from '../assets/logo-fonles-studio.png';
 
 		.logo-center {
 			max-height: 220px;
+		}
+
+		.logo-celerity {
+			max-height: 350px !important;
 		}
 
 		.info-text p {
